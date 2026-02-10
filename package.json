@@ -1,0 +1,28 @@
+{
+  "name": "calm",
+  "version": "0.1.0",
+  "description": "A command-driven email client built with Pear + SolidJS",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "pear dev .",
+    "build": "pear build .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "email",
+    "gmail",
+    "pear",
+    "solidjs",
+    "command-palette"
+  ],
+  "author": "Bobby The Lobster",
+  "license": "MIT",
+  "pear": {
+    "name": "Calm",
+    "type": "desktop",
+    "main": "src/index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
