@@ -6,6 +6,49 @@
 
 ---
 
+## Why This Matters (Motivation)
+
+### The Mission
+We're building **Calm** - a command-driven email client that puts focus and keyboard efficiency first. Think VS Code's command palette, but for email. No clutter, no distractions, just your inbox and powerful commands.
+
+### The Deadline Pressure
+- **Original sprint start:** Feb 16, 2026 (11 days ago)
+- **Days with zero code:** 10 days (Day 2-11, complete standstill)
+- **Revised deadline:** March 7, 2026 (9 days from today)
+- **Current progress:** Phase 1 (OAuth + API) done, Phase 2 (UI) not started
+
+**We've already burned 10 days of the original 14-day sprint.** Every hour counts now.
+
+### Why Pear Runtime is Non-Negotiable
+Sam (project owner) has a **hard requirement** to use Pear runtime instead of Electron/Tauri because:
+- **Lighter weight:** Pear is built on Holepunch P2P stack, much smaller than Electron
+- **Future P2P features:** Calm may eventually support peer-to-peer email sync/backup
+- **Learning investment:** Sam wants to build with emerging P2P-native technologies
+- **Philosophy fit:** Calm is about minimalism; Pear aligns with that vision
+
+**Switching to Electron is NOT an option.** We must make Pear work.
+
+### The Blocker Impact
+Without Pear runtime working:
+- ❌ Cannot run `pear dev .` to start development server
+- ❌ Cannot test any UI components we build
+- ❌ Cannot build the command palette, email list, reader, compose modal
+- ❌ Cannot verify OAuth integration works in desktop app context
+- ❌ Cannot ship MVP by March 7
+
+**This single blocker is preventing ALL progress on the 9-day sprint.**
+
+### What Success Looks Like
+When unblocked:
+- ✅ `pear --version` works
+- ✅ `pear dev .` launches the app
+- ✅ We can start building UI components TODAY
+- ✅ We catch up on lost time and ship by March 7
+
+**Time sensitivity:** Every hour this blocker persists pushes the deadline further out of reach.
+
+---
+
 ## Problem Summary
 
 Cannot run Pear runtime due to missing system library `libatomic.so`. This blocks the entire Calm email client development sprint.
